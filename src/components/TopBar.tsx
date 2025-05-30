@@ -4,8 +4,21 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Bell, Search, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
 
 export function TopBar() {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleBellClick = () => {
+    navigate('/alerts');
+    toast({
+      title: "Notifications",
+      description: "Viewing your latest alerts and notifications",
+    });
+  };
+
   return (
     <header className="h-16 border-b bg-white flex items-center justify-between px-6">
       <div className="flex items-center gap-4">
@@ -20,7 +33,7 @@ export function TopBar() {
       </div>
       
       <div className="flex items-center gap-4">
-        <Button variant="ghost" size="icon" className="relative">
+        <Button variant="ghost" size="icon" className="relative" onClick={handleBellClick}>
           <Bell className="w-5 h-5" />
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
         </Button>

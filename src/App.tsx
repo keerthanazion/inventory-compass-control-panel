@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Inventory from "./pages/Inventory";
 import Redistribute from "./pages/Redistribute";
 import Transactions from "./pages/Transactions";
+import Alerts from "./pages/Alerts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/redistribute" element={<Redistribute />} />
           <Route path="/transactions" element={<Transactions />} />
+          <Route path="/alerts" element={<Alerts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
