@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Inventory from "./pages/Inventory";
 import Redistribute from "./pages/Redistribute";
+import RedistributionManagement from "./pages/RedistributionManagement";
 import Transactions from "./pages/Transactions";
 import Alerts from "./pages/Alerts";
 import NotFound from "./pages/NotFound";
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/redistribute" element={<Redistribute />} />
+          <Route path="/redistribution-management" element={<RedistributionManagement />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/alerts" element={<Alerts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
