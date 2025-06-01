@@ -20,13 +20,15 @@ import {
   Receipt, 
   Bell, 
   Settings,
-  HelpCircle 
+  HelpCircle,
+  GitBranch
 } from 'lucide-react';
 
 const navigationItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Inventory", url: "/inventory", icon: Package },
   { title: "Redistribute", url: "/redistribute", icon: RefreshCw },
+  { title: "Redistribution Management", url: "/redistribution-management", icon: GitBranch },
   { title: "Transactions", url: "/transactions", icon: Receipt },
   { title: "Alerts", url: "/alerts", icon: Bell },
   { title: "Settings", url: "/settings", icon: Settings },
