@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
@@ -20,15 +19,13 @@ import {
   Bell, 
   Settings,
   HelpCircle,
-  GitBranch,
-  Plus
+  GitBranch
 } from 'lucide-react';
 
 const navigationItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Inventory", url: "/inventory", icon: Package },
   { title: "Redistribution Management", url: "/redistribution-management", icon: GitBranch },
-  { title: "Create Distribution Branch", url: "/create-distribution-branch", icon: Plus },
   { title: "Transactions", url: "/transactions", icon: Receipt },
   { title: "Alerts", url: "/alerts", icon: Bell },
   { title: "Settings", url: "/settings", icon: Settings },
