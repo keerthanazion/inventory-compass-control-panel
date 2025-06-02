@@ -11,6 +11,7 @@ import RedistributionManagement from "./pages/RedistributionManagement";
 import CreateRedistribution from "./pages/CreateRedistribution";
 import Transactions from "./pages/Transactions";
 import Alerts from "./pages/Alerts";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/create-redistribution" element={<CreateRedistribution />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/alerts" element={<Alerts />} />
+          <Route path="/settings" element={<Settings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

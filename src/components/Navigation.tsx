@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
@@ -45,7 +46,7 @@ export function Navigation() {
               <Package className="w-5 h-5 text-white" />
             </div>
             {!isCollapsed && (
-              <span className="font-bold text-lg">InvRedist</span>
+              <span className="font-bold text-lg">AKTA</span>
             )}
           </div>
         </div>
