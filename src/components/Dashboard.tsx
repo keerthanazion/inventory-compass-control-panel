@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -57,10 +56,10 @@ export function Dashboard() {
         </div>
       </div>
 
-      {/* Row 2: Split View - Surplus Alert & Impact Summary */}
-      <div className="grid grid-cols-3 gap-6 h-48">
-        {/* LEFT: Surplus Alert Card (1/3 width) */}
-        <Card className="border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200 h-full">
+      {/* Row 2 & 3: Equal Grid Layout - 4 Components */}
+      <div className="grid grid-cols-2 gap-6">
+        {/* Surplus Alert Card */}
+        <Card className="border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200 h-64">
           <CardContent className="p-6 h-full flex flex-col justify-between">
             <div className="flex items-start gap-4">
               <AlertTriangle className="w-8 h-8 text-orange-600 flex-shrink-0" />
@@ -80,8 +79,8 @@ export function Dashboard() {
           </CardContent>
         </Card>
 
-        {/* RIGHT: Impact Summary (2/3 width) */}
-        <Card className="bg-white border-gray-200 col-span-2 h-full">
+        {/* This Month's Redistribution */}
+        <Card className="bg-white border-gray-200 h-64">
           <CardContent className="p-6 h-full">
             <div className="space-y-4 h-full flex flex-col">
               <h3 className="text-lg font-semibold text-gray-900">This Month's Redistribution</h3>
@@ -107,18 +106,15 @@ export function Dashboard() {
             </div>
           </CardContent>
         </Card>
-      </div>
 
-      {/* Row 3: Two-Column Layout */}
-      <div className="grid grid-cols-2 gap-6">
-        {/* LEFT: Nearby Kiosks with Demand */}
-        <Card className="bg-white border-gray-200">
-          <CardContent className="p-6">
+        {/* Nearby Kiosks with Demand */}
+        <Card className="bg-white border-gray-200 h-64">
+          <CardContent className="p-6 h-full">
             <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               Nearby Kiosks with Demand
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-3 overflow-auto">
               <div className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4 text-gray-400" />
@@ -156,14 +152,14 @@ export function Dashboard() {
           </CardContent>
         </Card>
 
-        {/* RIGHT: Recent Redistributions */}
-        <Card className="bg-white border-gray-200">
-          <CardContent className="p-6">
+        {/* Recent Redistributions */}
+        <Card className="bg-white border-gray-200 h-64">
+          <CardContent className="p-6 h-full">
             <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Clock className="w-5 h-5" />
               Recent Redistributions
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-3 overflow-auto">
               <div className="flex items-center gap-3 py-2">
                 <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <div>
