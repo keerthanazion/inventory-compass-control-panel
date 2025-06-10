@@ -23,7 +23,7 @@ export function Dashboard() {
   const navigate = useNavigate();
 
   return (
-    <div className="p-6 space-y-8 bg-gray-50 min-h-full">
+    <div className="p-6 space-y-6 bg-gray-50 min-h-full">
       {/* Row 1: Real-Time Key Indicators */}
       <div className="flex items-center justify-between gap-8 py-4">
         <div className="flex items-center gap-2">
@@ -58,61 +58,55 @@ export function Dashboard() {
       </div>
 
       {/* Row 2: Split View - Surplus Alert & Impact Summary */}
-      <div className="grid grid-cols-5 gap-6">
-        {/* LEFT: Surplus Alert Card (40% width = 2 columns) */}
-        <div className="col-span-2">
-          <Card className="border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200">
-            <CardContent className="p-6">
-              <div className="flex items-start gap-4">
-                <AlertTriangle className="w-8 h-8 text-orange-600 flex-shrink-0" />
-                <div className="space-y-3">
-                  <div>
-                    <h3 className="text-xl font-bold text-orange-900">Surplus Alert</h3>
-                    <div className="text-3xl font-bold text-orange-800 mt-1">3 Items Over Threshold</div>
-                    <p className="text-orange-700 mt-2">Redistribute now to avoid waste</p>
-                  </div>
-                  <Button 
-                    className="bg-orange-600 hover:bg-orange-700 text-white"
-                    onClick={() => navigate('/redistribution-management')}
-                  >
-                    View & Redistribute
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
+      <div className="grid grid-cols-3 gap-6 h-48">
+        {/* LEFT: Surplus Alert Card (1/3 width) */}
+        <Card className="border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200 h-full">
+          <CardContent className="p-6 h-full flex flex-col justify-between">
+            <div className="flex items-start gap-4">
+              <AlertTriangle className="w-8 h-8 text-orange-600 flex-shrink-0" />
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-orange-900">Surplus Alert</h3>
+                <div className="text-2xl font-bold text-orange-800">3 Items Over Threshold</div>
+                <p className="text-sm text-orange-700">Redistribute now to avoid waste</p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+            <Button 
+              className="bg-orange-600 hover:bg-orange-700 text-white w-full mt-4"
+              onClick={() => navigate('/redistribution-management')}
+            >
+              View & Redistribute
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </CardContent>
+        </Card>
 
-        {/* RIGHT: Impact Summary (60% width = 3 columns) */}
-        <div className="col-span-3">
-          <Card className="bg-white border-gray-200">
-            <CardContent className="p-6">
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-gray-900">This Month's Redistribution</h3>
-                
-                <div className="flex items-center gap-3">
-                  <Leaf className="w-8 h-8 text-green-600" />
-                  <div>
-                    <div className="text-3xl font-bold text-green-600">120kg Saved from Waste</div>
-                    <div className="text-gray-600 mt-1">₹3,240 Value Recovered • 89% Success Rate</div>
-                  </div>
-                </div>
-                
-                {/* Progress bar for monthly goal */}
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Monthly Goal Progress</span>
-                    <span className="font-semibold text-gray-900">75%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-green-500 h-2 rounded-full transition-all duration-300" style={{ width: '75%' }}></div>
+        {/* RIGHT: Impact Summary (2/3 width) */}
+        <Card className="bg-white border-gray-200 col-span-2 h-full">
+          <CardContent className="p-6 h-full">
+            <div className="space-y-4 h-full flex flex-col">
+              <h3 className="text-lg font-semibold text-gray-900">This Month's Redistribution</h3>
+              
+              <div className="flex items-center gap-4 flex-1">
+                <Leaf className="w-12 h-12 text-green-600 flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="text-3xl font-bold text-green-600">120kg Saved from Waste</div>
+                  <div className="text-gray-600 mt-2">₹3,240 Value Recovered • 89% Success Rate</div>
+                  
+                  {/* Progress bar for monthly goal */}
+                  <div className="space-y-2 mt-4">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Monthly Goal Progress</span>
+                      <span className="font-semibold text-gray-900">75%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3">
+                      <div className="bg-green-500 h-3 rounded-full transition-all duration-300" style={{ width: '75%' }}></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Row 3: Two-Column Layout */}
