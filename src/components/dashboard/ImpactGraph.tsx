@@ -19,7 +19,7 @@ export function ImpactGraph() {
               <Leaf className="w-8 h-8" />
               120kg
             </div>
-            <p className="text-gray-600 mt-1">Saved from waste this month</p>
+            <p className="text-gray-600 mt-1">Redistributed successfully</p>
           </div>
           
           <div className="grid grid-cols-2 gap-4 pt-4 border-t">
