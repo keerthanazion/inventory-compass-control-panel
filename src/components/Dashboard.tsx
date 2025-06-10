@@ -88,7 +88,7 @@ export function Dashboard() {
               <div className="flex items-center gap-4 flex-1">
                 <Leaf className="w-12 h-12 text-green-600 flex-shrink-0" />
                 <div className="flex-1">
-                  <div className="text-3xl font-bold text-green-600">120kg Saved from Waste</div>
+                  <div className="text-3xl font-bold text-green-600">120kg Redistributed Successfully</div>
                   <div className="text-gray-600 mt-2">₹3,240 Value Recovered • 89% Success Rate</div>
                   
                   {/* Progress bar for monthly goal */}
@@ -154,41 +154,41 @@ export function Dashboard() {
 
         {/* Recent Redistributions */}
         <Card className="bg-white border-gray-200 h-64">
-          <CardContent className="p-6 h-full">
+          <CardContent className="p-6 h-full flex flex-col">
             <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Clock className="w-5 h-5" />
               Recent Redistributions
             </h3>
-            <div className="space-y-3 overflow-auto">
-              <div className="flex items-center gap-3 py-2">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-gray-900">Organic Apples</div>
-                  <div className="text-sm text-gray-600">Store A → Kiosk 12 • 2h ago</div>
+            <div className="space-y-3 overflow-auto flex-1">
+              <div className="flex items-start gap-3 py-2">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold text-gray-900 truncate">Organic Apples</div>
+                  <div className="text-sm text-gray-600 truncate">Store A → Kiosk 12 • 2h ago</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-3 py-2">
-                <Clock className="w-5 h-5 text-yellow-600 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-gray-900">Onions</div>
-                  <div className="text-sm text-gray-600">Store A → Kiosk 9 • 4h ago</div>
+              <div className="flex items-start gap-3 py-2">
+                <Clock className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold text-gray-900 truncate">Onions</div>
+                  <div className="text-sm text-gray-600 truncate">Store A → Kiosk 9 • 4h ago</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-3 py-2">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-gray-900">Dairy Products</div>
-                  <div className="text-sm text-gray-600">Store C → Kiosk 15 • 6h ago</div>
+              <div className="flex items-start gap-3 py-2">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold text-gray-900 truncate">Dairy Products</div>
+                  <div className="text-sm text-gray-600 truncate">Store C → Kiosk 15 • 6h ago</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-3 py-2">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-gray-900">Packaged Meals</div>
-                  <div className="text-sm text-gray-600">Store D → Kiosk 7 • 1 day ago</div>
+              <div className="flex items-start gap-3 py-2">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold text-gray-900 truncate">Packaged Meals</div>
+                  <div className="text-sm text-gray-600 truncate">Store D → Kiosk 7 • 1 day ago</div>
                 </div>
               </div>
             </div>
